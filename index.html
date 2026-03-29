@@ -28,16 +28,13 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
 /* ══ PAGE 0 — TOUCH HEART ══ */
 #p0{background:radial-gradient(ellipse at 50% 35%,#1a0030 0%,#0d0018 50%,#04000d 100%);z-index:10;justify-content:flex-start;padding-top:clamp(30px,6vh,64px);}
 
-/* Top tagline */
 .p0-tagline{text-align:center;margin-bottom:clamp(16px,3vh,30px);}
 .p0-tagline-eyebrow{font-size:0.62rem;letter-spacing:7px;color:rgba(212,168,83,0.55);text-transform:uppercase;margin-bottom:7px;}
 .p0-tagline-title{font-family:'Great Vibes',cursive;font-size:clamp(2.2rem,7vw,4rem);color:#fff;line-height:1.05;text-shadow:0 0 36px rgba(255,140,175,0.35);}
 .p0-tagline-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(0.9rem,2.5vw,1.15rem);font-style:italic;color:rgba(255,179,198,0.55);margin-top:7px;letter-spacing:0.5px;}
 
-/* Scene container — heart falls inside this */
 .p0-scene{position:relative;width:clamp(180px,50vw,280px);height:clamp(180px,36vh,260px);}
 
-/* Heart wrapper: starts at top, falls to bottom */
 .p0-hw{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0;}
 .p0-hw.fall{animation:heartFall 1.7s cubic-bezier(0.215,0.61,0.355,1) forwards;}
 @keyframes heartFall{
@@ -49,7 +46,6 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
   100%{top:var(--fd); transform:translateX(-50%) rotate(0deg)  scale(1);}
 }
 
-/* Shadow ellipse below heart */
 .p0-shadow{width:56px;height:8px;border-radius:50%;background:radial-gradient(ellipse,rgba(200,60,100,0.32) 0%,transparent 80%);margin-top:2px;transform:scaleX(0.25);opacity:0;}
 .p0-hw.fall .p0-shadow{animation:shadowAnim 1.7s cubic-bezier(0.215,0.61,0.355,1) forwards;}
 @keyframes shadowAnim{
@@ -60,32 +56,23 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
   100%{transform:scaleX(0.88);opacity:0.58;}
 }
 
-/* Ground line */
 .p0-ground{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,168,83,0.28),transparent);}
 
-/* Heart button */
 .p0-btn{background:none;border:none;cursor:pointer;display:block;position:relative;-webkit-tap-highlight-color:transparent;}
 .p0-heart{width:clamp(88px,21vw,126px);height:clamp(88px,21vw,126px);filter:drop-shadow(0 0 22px rgba(240,80,130,0.65));transition:transform 0.18s cubic-bezier(0.34,1.56,0.64,1);}
 .p0-btn:active .p0-heart{transform:scale(0.86);}
 
-/* Pulse rings */
 .p0-ring{position:absolute;inset:-6px;border-radius:50%;border:1.5px solid rgba(244,100,140,0.32);animation:ring 2.2s ease-out infinite;pointer-events:none;}
 .p0-ring:nth-child(2){animation-delay:.75s;}
 .p0-ring:nth-child(3){animation-delay:1.5s;}
 @keyframes ring{0%{transform:scale(0.8);opacity:0.7;}100%{transform:scale(2.4);opacity:0;}}
 
-/* Hint text */
 .p0-hint{font-size:0.63rem;letter-spacing:5px;color:rgba(255,179,198,0.48);text-transform:uppercase;margin-top:14px;animation:pulse 2.6s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:0.48;}50%{opacity:1;}}
 
-/* Reveal after tap */
 .p0-reveal{text-align:center;margin-top:18px;opacity:0;}
 .p0-reveal-title{font-family:'Great Vibes',cursive;font-size:clamp(1.5rem,5vw,2.4rem);color:#ffb3c6;text-shadow:0 0 18px rgba(255,140,170,0.4);}
 .p0-reveal-sub{font-size:0.67rem;letter-spacing:4px;color:rgba(255,179,198,0.42);text-transform:uppercase;margin-top:5px;}
-
-/* Dropped hearts */
-.drop-heart{position:fixed;pointer-events:none;z-index:9999;animation:dropFall 1.05s cubic-bezier(0.23,1,0.32,1) forwards;}
-@keyframes dropFall{0%{opacity:1;transform:translateY(0) scale(0.5) rotate(-12deg);}60%{opacity:1;}100%{opacity:0;transform:translateY(58vh) scale(1.1) rotate(18deg);}}
 
 /* ══ PAGE 1 — HEART TREE ══ */
 #p1{background:radial-gradient(ellipse at 50% 80%,#0d0018 0%,#04000d 60%,#000008 100%);}
@@ -142,7 +129,7 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
 .letter-card::-webkit-scrollbar{width:3px;}
 .letter-card::-webkit-scrollbar-thumb{background:var(--lav);border-radius:4px;}
 
-/* ══ PAGE 6 — VIDEO (Cormorant Garamond) ══ */
+/* ══ PAGE 6 — VIDEO ══ */
 #p6{background:linear-gradient(160deg,#0d0812 0%,#1a0f2e 100%);}
 .p6-head{text-align:center;margin-bottom:16px;}
 .p6-eyebrow{font-size:0.6rem;letter-spacing:7px;color:rgba(201,184,239,0.45);text-transform:uppercase;margin-bottom:6px;}
@@ -172,23 +159,18 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
 </head>
 <body>
 
-<!-- ═══════════════════════════
-     PAGE 0 — TOUCH HEART INTRO
-═══════════════════════════ -->
+<!-- PAGE 0 — TOUCH HEART INTRO -->
 <div class="page active" id="p0">
   <div id="p0Stars"></div>
 
-  <!-- Tagline -->
   <div class="p0-tagline">
     <div class="p0-tagline-eyebrow">✦ a moment made just for you ✦</div>
     <div class="p0-tagline-title">Touch the Heart</div>
     <div class="p0-tagline-desc">and let the magic unfold</div>
   </div>
 
-  <!-- Heart fall scene -->
   <div class="p0-scene" id="p0Scene">
     <div class="p0-hw" id="p0HW">
-      <!-- Heart button with rings -->
       <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;">
         <div class="p0-ring"></div>
         <div class="p0-ring"></div>
@@ -216,25 +198,20 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
           </svg>
         </button>
       </div>
-      <!-- Ground shadow -->
       <div class="p0-shadow" id="p0Shadow"></div>
     </div>
     <div class="p0-ground"></div>
   </div>
 
-  <!-- Hint -->
   <div class="p0-hint" id="p0Hint">✦ tap the heart to begin ✦</div>
 
-  <!-- Reveal text -->
   <div class="p0-reveal" id="p0Reveal">
     <div class="p0-reveal-title">With All My Love 🩷</div>
     <div class="p0-reveal-sub">a birthday surprise awaits you</div>
   </div>
 </div>
 
-<!-- ════════════════
-     PAGE 1 — TREE
-════════════════ -->
+<!-- PAGE 1 — TREE -->
 <div class="page" id="p1">
   <div id="floatingHeartsP1"></div>
   <div class="p1-top">
@@ -376,27 +353,24 @@ const DOB = new Date('2002-03-20'); // ✏️ Change to birthday person's DOB
 // ─── STATE ───
 let current=0,total=8,musicStarted=false,typingDone=false,heartTouched=false,slideTimer=null,slideIndex=0;
 const audio=document.getElementById('bgMusic');
+const vid=document.getElementById('birthdayVideo');
 
 // ─── FALL DISTANCE ───
-// Measures at runtime so heart lands exactly on the ground line
 function setFallDist(){
   const scene=document.getElementById('p0Scene');
   const hw=document.getElementById('p0HW');
-  // fall distance = scene height - heart wrapper height (lands at bottom = ground)
   const fd=Math.max(scene.offsetHeight-hw.offsetHeight,0);
   hw.style.setProperty('--fd',fd+'px');
 }
 window.addEventListener('resize',setFallDist);
-// Run after fonts/layout settle
 setTimeout(setFallDist,200);
 
-// ─── TOUCH HEART ───
+// ─── TOUCH HEART — only heart falls, no drop flowers ───
 function touchHeart(){
   if(heartTouched)return;
   heartTouched=true;
 
-  setFallDist(); // recalc just before animating
-
+  setFallDist();
   startMusic(); // unlock audio on user gesture
 
   // Hide hint
@@ -404,10 +378,7 @@ function touchHeart(){
   hint.style.transition='opacity 0.4s';
   hint.style.opacity='0';
 
-  // Burst of mini hearts falling from the button
-  spawnDropHearts();
-
-  // Start fall animation after tiny delay so shadow can reset
+  // Trigger heart fall animation only
   setTimeout(()=>document.getElementById('p0HW').classList.add('fall'),60);
 
   // Show reveal text after landing
@@ -419,24 +390,6 @@ function touchHeart(){
 
   // Go to page 1
   setTimeout(()=>goTo(1),3200);
-}
-
-function spawnDropHearts(){
-  const btn=document.getElementById('p0Btn');
-  const r=btn.getBoundingClientRect();
-  const cx=r.left+r.width/2, cy=r.top+r.height/2;
-  const em=['💗','💕','💖','🌸','💝','🌷','✨','🩷'];
-  for(let i=0;i<16;i++){
-    setTimeout(()=>{
-      const h=document.createElement('div');
-      h.className='drop-heart';
-      h.textContent=em[Math.floor(Math.random()*em.length)];
-      const sx=cx+(Math.random()-0.5)*100;
-      h.style.cssText=`left:${sx}px;top:${cy}px;font-size:${14+Math.random()*18}px;animation-duration:${0.8+Math.random()*0.6}s;`;
-      document.body.appendChild(h);
-      setTimeout(()=>h.remove(),1700);
-    },i*52);
-  }
 }
 
 // ─── NAVIGATION ───
@@ -467,17 +420,31 @@ function goTo(n){
     document.getElementById('p1NextBtn').style.display='none';
     document.getElementById('p3Next').style.display='none';
   }
+
+  // If leaving video page, stop the video and restore music
+  if(current===6 && n!==6 && vid){
+    vid.pause();
+    vid.currentTime=0;
+    // Fade music back in
+    audio.volume=0;
+    resumeMusic();
+    let v=0;
+    const fi=setInterval(()=>{v=Math.min(v+0.04,0.82);audio.volume=v;if(v>=0.82)clearInterval(fi);},110);
+  }
+
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));
   document.getElementById('p'+n).classList.add('active');
   document.querySelectorAll('.dot')[n].classList.add('active');
   current=n;
+
   if(n===1)startTreeAnimation();
   if(n===2)animateCounters();
   if(n===3)startTyping();
   if(n===4)startSlideshow();
   if(n===6)handleVideoPage();
-  if(n!==6&&musicStarted)resumeMusic();
+  // Resume music on any non-video page (if music was started)
+  if(n!==6 && musicStarted && audio.paused)resumeMusic();
 }
 
 // ─── SWIPE ───
@@ -504,23 +471,57 @@ function startMusic(){
     const fi=setInterval(()=>{v=Math.min(v+0.04,0.82);audio.volume=v;if(v>=0.82)clearInterval(fi);},110);
   }).catch(()=>{});
 }
-function resumeMusic(){if(!musicStarted)return;if(audio.paused)audio.play().catch(()=>{});}
-function pauseMusic(){if(!audio.paused)audio.pause();}
+function resumeMusic(){
+  if(!musicStarted)return;
+  if(audio.paused)audio.play().catch(()=>{});
+}
+function pauseMusic(){
+  if(!audio.paused)audio.pause();
+}
 
 // ─── VIDEO PAGE ───
+// Music fades out → video plays → music fades back in when video ends
 function handleVideoPage(){
-  const vid=document.getElementById('birthdayVideo');
   if(!vid)return;
-  setTimeout(()=>{
-    let v=audio.volume;
-    const fo=setInterval(()=>{v=Math.max(v-0.06,0);audio.volume=v;if(v<=0){clearInterval(fo);pauseMusic();}},80);
-    vid.play().catch(()=>{});
-  },700);
+
+  // Fade out background music then play video
+  let v=audio.volume;
+  const fadeOut=setInterval(()=>{
+    v=Math.max(v-0.06,0);
+    audio.volume=v;
+    if(v<=0){
+      clearInterval(fadeOut);
+      pauseMusic();
+      // Auto-play video (user gesture already happened)
+      vid.play().catch(()=>{});
+    }
+  },80);
+
+  // When video ends → fade music back in
   vid.addEventListener('ended',()=>{
-    audio.volume=0; resumeMusic();
-    let v=0;
-    const fi=setInterval(()=>{v=Math.min(v+0.04,0.82);audio.volume=v;if(v>=0.82)clearInterval(fi);},110);
+    audio.volume=0;
+    resumeMusic();
+    let v2=0;
+    const fadeIn=setInterval(()=>{v2=Math.min(v2+0.04,0.82);audio.volume=v2;if(v2>=0.82)clearInterval(fadeIn);},110);
   },{once:true});
+
+  // Also handle manual pause/play to sync music
+  vid.addEventListener('pause',()=>{
+    // Only fade music in if video was not ended
+    if(!vid.ended && current===6){
+      audio.volume=0;
+      resumeMusic();
+      let v3=0;
+      const fi=setInterval(()=>{v3=Math.min(v3+0.04,0.6);audio.volume=v3;if(v3>=0.6)clearInterval(fi);},110);
+    }
+  });
+  vid.addEventListener('play',()=>{
+    // Fade music out when video resumes
+    if(current===6){
+      let v4=audio.volume;
+      const fo=setInterval(()=>{v4=Math.max(v4-0.06,0);audio.volume=v4;if(v4<=0){clearInterval(fo);pauseMusic();}},80);
+    }
+  });
 }
 
 // ─── COUNTER ───
@@ -582,7 +583,7 @@ function startTreeAnimation(){
   setTimeout(()=>document.getElementById('p1NextBtn').style.display='inline-block',2400+hpos.length*120+400);
 }
 
-// ─── STARS ───
+// ─── STARS (page 0) ───
 (function(){
   const el=document.getElementById('p0Stars');
   el.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:0;';
