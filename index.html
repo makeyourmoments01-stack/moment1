@@ -327,7 +327,10 @@ body{font-family:'Jost',sans-serif;background:var(--dark1);overflow:hidden;heigh
     <div class="p7-main">Thank You</div>
     <div class="p7-sub">for being in my life</div>
     <div class="p7-closing">🌸 today, tomorrow & always 🌸</div>
-    <button class="nav-btn" style="margin-top:28px;" onclick="goTo(0)">↩ Replay</button>
+    <div style="display:flex;gap:16px;justify-content:center;margin-top:28px;">
+      <button class="nav-btn" onclick="goTo(0)">↩ Replay</button>
+      <button class="nav-btn" onclick="exitApp()" style="border-color:#888;color:#aaa;">✕ Exit</button>
+    </div>
   </div>
   <div class="p7-brand">Make Your Moments ✦</div>
 </div>
@@ -477,6 +480,12 @@ function resumeMusic(){
 }
 function pauseMusic(){
   if(!audio.paused)audio.pause();
+}
+function exitApp(){
+  audio.pause();
+  audio.currentTime=0;
+  if(vid){vid.pause();vid.currentTime=0;}
+  history.back();
 }
 
 // ─── VIDEO PAGE ───
